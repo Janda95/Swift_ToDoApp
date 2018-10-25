@@ -15,6 +15,7 @@
 		B1353E44217BC9790079E25C /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1353E43217BC9790079E25C /* TodoListTests.swift */; };
 		B1353E4F217BC9790079E25C /* TodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1353E4E217BC9790079E25C /* TodoListUITests.swift */; };
 		B1353E5D217BD62E0079E25C /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1353E5C217BD62E0079E25C /* TodoTableViewController.swift */; };
+		B16401BB218132750040B6E8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16401BA218132750040B6E8 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B1353E4E217BC9790079E25C /* TodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListUITests.swift; sourceTree = "<group>"; };
 		B1353E50217BC9790079E25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1353E5C217BD62E0079E25C /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		B16401BA218132750040B6E8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B1353E35217BC9790079E25C /* Assets.xcassets */,
 				B1353E37217BC9790079E25C /* LaunchScreen.storyboard */,
 				B1353E3A217BC9790079E25C /* Info.plist */,
+				B16401BA218132750040B6E8 /* Item.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16401BB218132750040B6E8 /* Item.swift in Sources */,
 				B1353E31217BC9770079E25C /* ViewController.swift in Sources */,
 				B1353E5D217BD62E0079E25C /* TodoTableViewController.swift in Sources */,
 				B1353E2F217BC9770079E25C /* AppDelegate.swift in Sources */,
