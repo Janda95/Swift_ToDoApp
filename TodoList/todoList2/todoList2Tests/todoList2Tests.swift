@@ -1,8 +1,15 @@
+//
+//  todoList2Tests.swift
+//  todoList2Tests
+//
+//  Created by Aiyana Rettinghouse on 10/25/18.
+//  Copyright © 2018 JLR. All rights reserved.
+//
 
 import XCTest
-@testable import TodoList
+@testable import todoList2
 
-class TodoListTests: XCTestCase {
+class todoList2Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
