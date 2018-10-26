@@ -2,6 +2,13 @@ import UIKit
 
 class TableViewController: UITableViewController, UITextFieldDelegate {
     
+    
+    @IBAction func addItemButtonPressed(_ sender: UIBarButtonItem) {
+        itemList.append(Item(fromInput: "Test"))
+        tableView.reloadData()
+    }
+    
+    
     //struct containing information
     var itemList: [Item] = [Item(fromInput: "1"), Item(fromInput: "2")]
     
@@ -35,7 +42,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        //placeholder
     }
     
     
