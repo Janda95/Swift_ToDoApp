@@ -4,10 +4,19 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBAction func addItemButtonPressed(_ sender: UIBarButtonItem) {
-        itemList.append(Item(fromInput: "Test"))
-        tableView.reloadData()
+        
+        guard
+        let input: String = textField.text
+            else {
+               return
+        }
+        if input != "" {
+            itemList.append(Item(fromInput: input))
+            tableView.reloadData()
+        }
     }
     
+    @IBOutlet weak var textField: UITextField!
     
     //struct containing information
     var itemList: [Item] = [Item(fromInput: "1"), Item(fromInput: "2")]
@@ -20,11 +29,10 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     //cell text
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let indexItem = itemList[indexPath.row]
-        let indexRow = indexItem.getdescription()
+        let item = indexItem.getdescription()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell")!
-        cell.textLabel?.text = indexRow
-        
+        cell.textLabel?.text = item
         return cell
     }
     
@@ -42,9 +50,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //placeholder
+        if let destination = segue.destination as? DisplayItemViewController{
+            //destination.ItemDescription =
+            let temp: Int = tableView.indexPathForSelectedRow!.row
+            destination.textDescription = itemList[temp].getdescription()
+        }
     }
-    
     
     
 }
