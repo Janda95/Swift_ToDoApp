@@ -18,6 +18,8 @@
 		B1CEA29F21829B3400E7F8BB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEA29E21829B3400E7F8BB /* TableViewController.swift */; };
 		B1CEA2A12182B25700E7F8BB /* displayItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEA2A02182B25700E7F8BB /* displayItemViewController.swift */; };
 		B1CEA2A32182BF6300E7F8BB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEA2A22182BF6300E7F8BB /* ItemCell.swift */; };
+		B1F0307F21852F37004F18DE /* completedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F0307E21852F37004F18DE /* completedTableViewController.swift */; };
+		B1F03081218537E4004F18DE /* completeditemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F03080218537E4004F18DE /* completeditemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B1CEA29E21829B3400E7F8BB /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B1CEA2A02182B25700E7F8BB /* displayItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayItemViewController.swift; sourceTree = "<group>"; };
 		B1CEA2A22182BF6300E7F8BB /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		B1F0307E21852F37004F18DE /* completedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completedTableViewController.swift; sourceTree = "<group>"; };
+		B1F03080218537E4004F18DE /* completeditemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeditemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				B1CEA2A22182BF6300E7F8BB /* ItemCell.swift */,
 				B1CEA29E21829B3400E7F8BB /* TableViewController.swift */,
 				B1CEA29C21829ACC00E7F8BB /* Item.swift */,
+				B1F03080218537E4004F18DE /* completeditemViewController.swift */,
+				B1F0307E21852F37004F18DE /* completedTableViewController.swift */,
 				B1CEA27221829A7A00E7F8BB /* Main.storyboard */,
 				B1CEA27521829A7E00E7F8BB /* Assets.xcassets */,
 				B1CEA27721829A7E00E7F8BB /* LaunchScreen.storyboard */,
@@ -269,9 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1CEA27121829A7A00E7F8BB /* ViewController.swift in Sources */,
+				B1F0307F21852F37004F18DE /* completedTableViewController.swift in Sources */,
 				B1CEA29D21829ACC00E7F8BB /* Item.swift in Sources */,
 				B1CEA2A32182BF6300E7F8BB /* ItemCell.swift in Sources */,
 				B1CEA2A12182B25700E7F8BB /* displayItemViewController.swift in Sources */,
+				B1F03081218537E4004F18DE /* completeditemViewController.swift in Sources */,
 				B1CEA26F21829A7A00E7F8BB /* AppDelegate.swift in Sources */,
 				B1CEA29F21829B3400E7F8BB /* TableViewController.swift in Sources */,
 			);
