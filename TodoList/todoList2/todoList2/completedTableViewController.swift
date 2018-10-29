@@ -35,10 +35,10 @@ class completedTodoViewController: UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DisplayItemViewController{
+        if let destination = segue.destination as? completedItemViewController{
             //destination.ItemDescription =
             let temp: Int = tableView.indexPathForSelectedRow!.row
-            destination.textDescription = completeditemList[temp].getdescription()
+            destination.completedTextDescription = completeditemList[temp].getdescription()
         }
     }
     
