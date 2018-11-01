@@ -2,6 +2,7 @@ import UIKit
 
 class completedTodoViewController: UITableViewController{
     
+    //when view loads checks for any completed items to load into the completed item list
     override func viewDidLoad() {
         let tabbar = tabBarController as!BaseTabBarController
         //for ever item add all to this array
@@ -16,7 +17,7 @@ class completedTodoViewController: UITableViewController{
     //struct containing information
     var completeditemList: [Item] = [Item(fromInput: "3"), Item(fromInput: "4")]
     
-    //total cells
+    //total number of cells
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return completeditemList.count
     }
@@ -44,6 +45,7 @@ class completedTodoViewController: UITableViewController{
         
     }
     
+    //segue for displaying the information in own view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? completedItemViewController{
             //destination.ItemDescription =
@@ -52,6 +54,7 @@ class completedTodoViewController: UITableViewController{
         }
     }
     
+    //for deleting cells using a swipe on the cell
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("Deleted")

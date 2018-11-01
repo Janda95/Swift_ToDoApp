@@ -2,6 +2,7 @@ import UIKit
 
 class TableViewController: UITableViewController, UITextFieldDelegate {
     
+    //Button Action to add information from textField
     @IBAction func addItemButtonPressed(_ sender: UIBarButtonItem) {
         
         guard
@@ -15,11 +16,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    override func viewDidLoad() {
-            tableView.reloadData()
-    }
-    
+    //Input for new Item Cell
     @IBOutlet weak var textField: UITextField!
+    
+    override func viewDidLoad() {
+        tableView.reloadData()
+    }
     
     //struct containing information
     var itemList: [Item] = [Item(fromInput: "1")]
@@ -47,9 +49,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     //selecting cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemList[indexPath.row].getdescription())
-        
         performSegue(withIdentifier: "itemTransition", sender: nil)
-        
     }
     
     //segue for displaying cell information
@@ -63,10 +63,13 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    //used for the edit function in Display Options
     @IBAction func unwindToOne(_ sender: UIStoryboardSegue){}
     
     //testing material
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        //delete cell, also default action if swipe is fully completed
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             print("Delete button tapped")
             //delete item
@@ -75,10 +78,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
         }
         delete.backgroundColor = .red
         
+        
+        //When selected on Options when swiped, when completed items is loaded it will display this cells information
         let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
             print("Done button tapped")
-            //perform segue to completed item
             
+            //refereces TabBarController and gives it the string of the cell before deleting
             let tabbar = self.tabBarController as! BaseTabBarController
             let sendableText = self.itemList[indexPath.row].description
             self.itemList.remove(at: indexPath.row)
