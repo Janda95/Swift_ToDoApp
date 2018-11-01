@@ -49,15 +49,23 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
         
     }
     
+    //segue for displaying cell information
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DisplayItemViewController{
             //destination.ItemDescription =
             let temp: Int = tableView.indexPathForSelectedRow!.row
             destination.textDescription = itemList[temp].getdescription()
+            destination.row = temp
         }
     }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            self.itemList.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     
     @IBAction func unwindToOne(_ sender: UIStoryboardSegue){}
     
