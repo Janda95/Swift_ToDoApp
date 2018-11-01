@@ -9,7 +9,7 @@ class DisplayItemViewController: UIViewController {
     var row: Int = -1
     
     override func viewWillAppear(_ animated: Bool) {
-        ItemDescription.text = String(row)
+        ItemDescription.text = "Row: " + String(row)
         textField.text = textDescription
     }
     
