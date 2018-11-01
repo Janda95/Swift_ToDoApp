@@ -2,6 +2,16 @@ import UIKit
 
 class completedTodoViewController: UITableViewController{
     
+    override func viewDidLoad() {
+        let tabbar = tabBarController as!BaseTabBarController
+        //for ever item add all to this array
+        for item in tabbar.textToPass {
+            completeditemList.append(Item(fromInput: item))
+        }
+        tabbar.textToPass.removeAll()
+        tableView.reloadData()
+    }
+    
     
     //struct containing information
     var completeditemList: [Item] = [Item(fromInput: "3"), Item(fromInput: "4")]

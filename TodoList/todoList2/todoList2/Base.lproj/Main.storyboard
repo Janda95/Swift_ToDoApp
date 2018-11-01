@@ -185,7 +185,9 @@
         <scene sceneID="XEw-Rx-w3l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kkU-tY-Y2S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TODO" id="G9B-Og-oRd"/>
+                    <tabBarItem key="tabBarItem" title="TODO" id="G9B-Og-oRd">
+                        <color key="badgeColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e08-kX-Rkn">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -204,7 +206,9 @@
         <scene sceneID="KwB-nb-095">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vff-bR-9Ll" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DONE" id="d0V-7p-hrJ"/>
+                    <tabBarItem key="tabBarItem" title="DONE" id="d0V-7p-hrJ">
+                        <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cNr-Je-hGC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -219,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="2647.1999999999998" y="891.90404797601207"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="RIc-fL-H3f">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bb8-5u-m7R" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bb8-5u-m7R" customClass="BaseTabBarController" customModule="todoList2" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nVU-ec-PLh">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

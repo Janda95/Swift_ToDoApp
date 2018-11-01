@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1ABFD49218BC29D006A9E98 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABFD48218BC29D006A9E98 /* BaseTabBarController.swift */; };
 		B1CEA26F21829A7A00E7F8BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEA26E21829A7A00E7F8BB /* AppDelegate.swift */; };
 		B1CEA27121829A7A00E7F8BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEA27021829A7A00E7F8BB /* ViewController.swift */; };
 		B1CEA27421829A7A00E7F8BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1CEA27221829A7A00E7F8BB /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1ABFD48218BC29D006A9E98 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		B1CEA26B21829A7A00E7F8BB /* todoList2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoList2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CEA26E21829A7A00E7F8BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1CEA27021829A7A00E7F8BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				B1CEA29C21829ACC00E7F8BB /* Item.swift */,
 				B1F03080218537E4004F18DE /* completeditemViewController.swift */,
 				B1F0307E21852F37004F18DE /* completedTableViewController.swift */,
+				B1ABFD48218BC29D006A9E98 /* BaseTabBarController.swift */,
 				B1CEA27221829A7A00E7F8BB /* Main.storyboard */,
 				B1CEA27521829A7E00E7F8BB /* Assets.xcassets */,
 				B1CEA27721829A7E00E7F8BB /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 			files = (
 				B1CEA27121829A7A00E7F8BB /* ViewController.swift in Sources */,
 				B1F0307F21852F37004F18DE /* completedTableViewController.swift in Sources */,
+				B1ABFD49218BC29D006A9E98 /* BaseTabBarController.swift in Sources */,
 				B1CEA29D21829ACC00E7F8BB /* Item.swift in Sources */,
 				B1CEA2A32182BF6300E7F8BB /* ItemCell.swift in Sources */,
 				B1CEA2A12182B25700E7F8BB /* displayItemViewController.swift in Sources */,
