@@ -111,15 +111,10 @@
 		B1CEA26D21829A7A00E7F8BB /* todoList2 */ = {
 			isa = PBXGroup;
 			children = (
-				B1CEA26E21829A7A00E7F8BB /* AppDelegate.swift */,
-				B1CEA27021829A7A00E7F8BB /* ViewController.swift */,
-				B1CEA2A02182B25700E7F8BB /* displayItemViewController.swift */,
-				B1CEA2A22182BF6300E7F8BB /* ItemCell.swift */,
-				B1CEA29E21829B3400E7F8BB /* TableViewController.swift */,
-				B1CEA29C21829ACC00E7F8BB /* Item.swift */,
-				B1F03080218537E4004F18DE /* completeditemViewController.swift */,
-				B1F0307E21852F37004F18DE /* completedTableViewController.swift */,
-				B1ABFD48218BC29D006A9E98 /* BaseTabBarController.swift */,
+				B1D1CBFE218F1CA2008CE000 /* Default */,
+				B1D1CBFF218F1CD3008CE000 /* ViewControllers */,
+				B1D1CC00218F1CF3008CE000 /* Models */,
+				B1D1CC01218F1D16008CE000 /* NavigationControllers */,
 				B1CEA27221829A7A00E7F8BB /* Main.storyboard */,
 				B1CEA27521829A7E00E7F8BB /* Assets.xcassets */,
 				B1CEA27721829A7E00E7F8BB /* LaunchScreen.storyboard */,
@@ -144,6 +139,43 @@
 				B1CEA29021829A7E00E7F8BB /* Info.plist */,
 			);
 			path = todoList2UITests;
+			sourceTree = "<group>";
+		};
+		B1D1CBFE218F1CA2008CE000 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				B1CEA26E21829A7A00E7F8BB /* AppDelegate.swift */,
+				B1CEA27021829A7A00E7F8BB /* ViewController.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		B1D1CBFF218F1CD3008CE000 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1CEA2A02182B25700E7F8BB /* displayItemViewController.swift */,
+				B1CEA29E21829B3400E7F8BB /* TableViewController.swift */,
+				B1F03080218537E4004F18DE /* completeditemViewController.swift */,
+				B1F0307E21852F37004F18DE /* completedTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B1D1CC00218F1CF3008CE000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1CEA2A22182BF6300E7F8BB /* ItemCell.swift */,
+				B1CEA29C21829ACC00E7F8BB /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B1D1CC01218F1D16008CE000 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1ABFD48218BC29D006A9E98 /* BaseTabBarController.swift */,
+			);
+			path = NavigationControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
