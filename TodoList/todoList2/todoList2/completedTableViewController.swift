@@ -4,18 +4,39 @@ class completedTodoViewController: UITableViewController{
     
     //when view loads checks for any completed items to load into the completed item list
     override func viewDidLoad() {
-        let tabbar = tabBarController as!BaseTabBarController
+        tableView.reloadData()
+        
+        //attempt to grab data from storage and append to current array
+        guard
+            let dataFromStorage = UserDefaults.standard.object(forKey: "completeditemList") as? Data
+            else {
+                return
+        }
+        let decoder = JSONDecoder()
+        let tempArray = try! decoder.decode([Item].self, from: dataFromStorage)
+        completeditemList = completeditemList + tempArray
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let tabbar = tabBarController as! BaseTabBarController
         //for ever item add all to this array
         for item in tabbar.textToPass {
             completeditemList.append(Item(fromInput: item))
+            print("item passed successfully")
         }
         tabbar.textToPass.removeAll()
         tableView.reloadData()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        //attempt to encode data and put into storage
+        let encoder = JSONEncoder()
+        let encoded = try! encoder.encode(completeditemList)
+        UserDefaults.standard.set(encoded, forKey: "completeditemList")
+    }
     
     //struct containing information
-    var completeditemList: [Item] = [Item(fromInput: "3"), Item(fromInput: "4")]
+    var completeditemList: [Item] = []
     
     //total number of cells
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,5 +83,6 @@ class completedTodoViewController: UITableViewController{
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
     
 }

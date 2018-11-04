@@ -1,6 +1,6 @@
 import UIKit
 
-class TableViewController: UITableViewController, UITextFieldDelegate {
+class TableViewController: UITableViewController, UITextFieldDelegate{
     
     //Button Action to add information from textField
     @IBAction func addItemButtonPressed(_ sender: UIBarButtonItem) {
@@ -21,10 +21,31 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         tableView.reloadData()
+        
+        
+        //attempt to grab data from storage and append to current array
+        guard
+            let dataFromStorage = UserDefaults.standard.object(forKey: "itemList") as? Data
+        else {
+            return
+        }
+        let decoder = JSONDecoder()
+        let tempArray = try! decoder.decode([Item].self, from: dataFromStorage)
+        itemList = itemList + tempArray
+        
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        //attempt to encode data and put into storage
+        let encoder = JSONEncoder()
+        let encoded = try! encoder.encode(itemList)
+        UserDefaults.standard.set(encoded, forKey: "itemList")
+    }
+    
+    
     //struct containing information
-    var itemList: [Item] = [Item(fromInput: "1")]
+    var itemList: [Item] = []
+    
     
     //total cells
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
